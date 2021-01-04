@@ -1,0 +1,112 @@
+$black: #232323;
+
+div {
+  .custom-select {
+    &__control,
+    &__option,
+    &__placeholder,
+    &__menu,
+    &__single-value,
+    &__value-container,
+    &__option-label,
+    &__input {
+      font-size: 1.4rem;
+      font-weight: normal;
+      line-height: 1.8rem;
+    }
+
+    &__control {
+      border: 1px solid #d7d7d7;
+      border-radius: 1px;
+      box-shadow: none;
+      transition: all 0.3s;
+      height: 4.4rem;
+
+      &--is-focused,
+      &:hover {
+        border-color: $black;
+        cursor: pointer;
+        color: $black;
+
+        .custom-select__placeholder,
+        .custom-select__single-value {
+          color: #232323;
+        }
+      }
+    }
+
+    &__option {
+      background-color: white;
+      color: $black;
+      padding: 0.8rem 1.5rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #f5f5f5;
+      }
+
+      &--is-selected {
+        background-color: #f5f5f5;
+        color: $black;
+      }
+    }
+
+    &__menu {
+      background-color: #fff;
+      margin: 0;
+      padding-top: 0.8rem;
+      border-radius: 1px;
+      box-shadow: none;
+      border: 1px solid #d7d7d7;
+    }
+
+    &__value-container {
+      height: 100%;
+      padding: 0 1.5rem;
+    }
+
+    &__single-value {
+      color: #d7d7d7;
+      transition: color 0.3s;
+    }
+
+    &__menu-list {
+      background-color: #fff;
+      padding: 0;
+
+      > div {
+        background-color: white;
+        color: $black;
+        padding: 0.8rem 1.5rem;
+
+        &.is-selected {
+          background-color: #f5f5f5;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: #f5f5f5;
+        }
+      }
+    }
+
+    &__option-label {
+      color: $black;
+      margin-left: 1rem;
+    }
+
+    &__multi-value {
+      background-color: #E5E5E5;
+    }
+
+    &__multi-value__remove {
+      svg {
+        color: #999999;
+      }
+
+      &:hover {
+        background: #E5E5E5;
+      }
+    }
+  }
+}
